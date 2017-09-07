@@ -1,8 +1,12 @@
 <h3>Top Heroes</h3>
-<div class="grid grid-pad">
-    <div *ngFor="let hero of heroes" class="col-1-4">
-        <div class="module hero">
-            <h4>{{hero.name}}</h4>
+<div class="grid grid-pad step" [class.show]="listReady">
+    <div *ngFor="let hero of heroes" class="col-1-4"> <!--the two array items align with the path and :id token in the parameterized hero detail route definition that was added in app.module.ts-->
+        
+        <div class="module">
+            <a class=" hero" [routerLink]="['/detail', hero.id]">
+                <h4>{{hero.name}}</h4>
+            </a>
         </div>
     </div>
 </div>
+<hero-search></hero-search>

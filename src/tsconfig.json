@@ -8,6 +8,8 @@
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "noStrictGenericChecks": true
+    //I added this to bypass the "lift property should match" bug
   }
 }
